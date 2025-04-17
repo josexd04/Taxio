@@ -1,0 +1,11 @@
+<mat-form-field>
+  <mat-label>Posición</mat-label>
+  <mat-select [ngModel]="selectedPosition()" name="Option" (selectionChange)="onPositionChange($event)">
+    <!-- Loop through Options array -->
+    @for (Option of Options; track Option) {
+    <mat-option class="select"  [value]="Option.value">{{
+      Option.viewValue
+    }}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>

@@ -1,0 +1,32 @@
+<h3 mat-dialog-title class="text-primary m-3">Asignar Folio</h3>
+
+<mat-dialog-content>
+  <form [formGroup]="form" class="form">
+    <mat-form-field appearance="fill" class="w-100">
+      <mat-label>Folio</mat-label>
+      <input
+        matInput
+        placeholder="Folio"
+        formControlName="folio"
+        [class.is-invalid]="
+          form.controls.folio.invalid && form.controls.folio.touched
+        "
+      />
+      @if (form.controls.folio.hasError('required')){
+      <mat-error> El folio es requerido. </mat-error>
+      }
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button
+    mat-raised-button
+    color="primary"
+    [disabled]="form.invalid"
+    (click)="confirm()"
+  >
+    Agregar
+  </button>
+</mat-dialog-actions>

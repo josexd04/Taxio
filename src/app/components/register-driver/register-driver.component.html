@@ -1,0 +1,82 @@
+<form (ngSubmit)="saveDriver()" [formGroup]="formGroup" class="container">
+  <h2 class="my-4 h2 text-info">Registrar conductor</h2>
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>Nombre del conductor</mat-label>
+    <input
+      required
+      matInput
+      autocomplete="off"
+      type="text"
+      id="name"
+      placeholder="Nombre"
+      formControlName="name"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>Clave del conductor</mat-label>
+    <input
+      matInput
+      autocomplete="off"
+      type="text"
+      id="driverID"
+      minlength="3"
+      maxlength="15"
+      placeholder="Clave"
+      formControlName="driverID"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>Unidad</mat-label>
+    <input
+      matInput
+      autocomplete="off"
+      type="text"
+      id="taxiNumber"
+      minlength="3"
+      maxlength="6"
+      placeholder="Unidad"
+      formControlName="taxiNumber"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>Licencia del conductor</mat-label>
+    <input
+      matInput
+      autocomplete="off"
+      type="text"
+      id="license"
+      maxlength="30"
+      placeholder="Licencia"
+      formControlName="license"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>Teléfono del conductor</mat-label>
+    <input
+      matInput
+      autocomplete="off"
+      type="phone"
+      id="phone"
+      placeholder="Teléfono"
+      formControlName="phone"
+      pattern="[0-9]{10}"
+      minlength="10"
+      maxlength="10"
+      required
+    />
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    class="btn btn-lg btn-primary"
+    [disabled]="formGroup.invalid"
+  >
+    Registrar
+  </button>
+</form>

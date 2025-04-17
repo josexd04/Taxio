@@ -1,0 +1,47 @@
+<h2 class="card-header h2">Registrar usuario</h2>
+
+<form (submit)="singUp()" class="mt-5">
+  <fieldset>
+    <div>
+      <label for="inputuserName" class="form-label mt-4"
+        >Usuario</label
+      >
+      <input
+        type="email"
+        class="form-control"
+        id="inputuserName"
+        placeholder="Usuario"
+        required
+        autofocus
+        [(ngModel)]="user.userName"
+        autocomplete="off"
+        name="user"
+      />
+     
+    </div>
+    <div>
+      <label for="exampleInputPassword1" class="form-label mt-4"
+        >Contraseña</label
+      >
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Contraseña"
+        autocomplete="off"
+        [(ngModel)]="user.password"
+        name="password"
+      />
+    </div>
+    @if (err) {
+      <div class="alert alert-danger mt-2" role="alert">
+        <p>{{errorMessage}}</p>
+      </div>
+    }
+    <div class="d-grid gap-2 mt-5">
+      <button type="submit" name="" id="" class="btn btn-primary">
+        Registrar
+      </button>
+    </div>
+  </fieldset>
+</form>

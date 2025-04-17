@@ -1,0 +1,102 @@
+.text-table {
+    font-size: 20px;
+    width: auto; /* Ensure columns take up available space */
+}
+
+.text-title {
+    font-size: 19px;
+}
+
+.taxiNumber-col {
+    width: 12px;
+}
+
+/* Ensure table takes up the full width of the container */
+.table-responsive {
+    padding: 20px;
+    width: 100%;
+}
+
+@media (max-width: 550px) {
+    .table-responsive {
+        padding: 0px;
+    }
+}
+
+tbody {
+    max-height: 9px;
+    overflow-y: auto;
+}
+
+.min-col {
+    width: 140px;
+}
+
+.btn-size {
+    width: 100px; 
+}
+
+#addTaxi {
+    position: absolute;
+    right: 27%;
+    bottom: 15%;
+}
+
+.taxiNumber {
+    cursor: pointer;
+    user-select: none;
+}
+
+.taxiNumber:hover {
+    color: rgb(254, 237, 49);
+    font-size: 26px;
+    transition: 0.4s;
+}
+
+.table-scroll {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+/* Para que la fila tenga el mismo aspecto al arrastrar */
+.preview-table {
+    width: 50%;
+    border-collapse: collapse;
+  }
+  
+  .preview-row {
+    background-color: #673ab7; /* Morado */
+    color: #fff;
+    border: 1px solid #4527a0; /* Borde un poco más oscuro */
+  }
+  
+  /* Placeholder que ocupe el ancho completo de la fila */
+  .drag-placeholder-row td {
+    background-color: #f9e4e4;
+    border: 2px dashed #b39ddb;
+    height: 50px; 
+  }
+  
+  /* Mientras arrastras la fila original */
+  tr.cdk-drag-dragging {
+    opacity: 0.6;
+    background-color: #b09af5;
+    color: #fff;
+    transition: all 0.2s ease;
+  }
+  
+  /* Personaliza la tabla y otras clases si lo deseas */
+  .table-scroll {
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+  
+  /* Ajustes para la vista previa (puedes agregar sombra o bordes) */
+  .preview-table {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ffffff;
+    height: 5%;
+    width: 65%;
+    color: #fff !important;
+  }
+  

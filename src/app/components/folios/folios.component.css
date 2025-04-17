@@ -1,0 +1,45 @@
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #4a90e2, #1a5ebf);
+}
+
+.clickable-row {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.clickable-row:hover {
+    background-color: #f8f9fa !important;
+}
+
+.avatar-sm {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-indicator {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-indicator::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e9ecef;
+    border: 2px solid #dee2e6;
+}
