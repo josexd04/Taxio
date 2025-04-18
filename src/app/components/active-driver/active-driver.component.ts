@@ -4,7 +4,7 @@ import { OnInit } from '@angular/core';
 import { IDriver } from '../../models/IDriver.models';
 import { DatePipe } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
-import { ErrorDialogComponent } from '../error-dialog/error-dialog.component';
+import { ErrorDialogComponent } from '../dialogs/error-dialog/error-dialog.component';
 
 
 

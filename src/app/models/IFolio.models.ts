@@ -4,5 +4,6 @@ export interface IFolio {
     driverID?: string;
     folio: string | number | null;
     user?: string;
+    date?: string;
 
 }

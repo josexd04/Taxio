@@ -4,7 +4,7 @@ import { AssignFolioDialogComponent } from './assign-folio-dialog/assign-folio-d
 import { input } from '@angular/core';
 import { FoliosService } from '../../../services/folios.service';
 import { IFolio } from '../../../models/IFolio.models';
-import { ErrorDialogComponent } from '../../error-dialog/error-dialog.component';
+import { ErrorDialogComponent } from '../../dialogs/error-dialog/error-dialog.component';
 
 @Component({
   selector: 'app-assign-folio',
@@ -41,7 +41,6 @@ export class AssignFolioComponent {
     this.folioService.assignFolios(folioData).subscribe({
       next: () => {
         this.updateState.emit(true);
-        alert("folio data updated")
       },
       error: error => {
         console.error('Error al asignar el folio', error);

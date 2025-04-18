@@ -32,122 +32,54 @@
                       </th>
                   </tr>
               </thead>
+                  <!--Logs-->
+                  @for (folio of folios; track $index) {
               <tbody class="border-top-0">
-                  <!-- Registro 1 -->
-                  <tr class="clickable-row">
-                      <td class="ps-4 fw-bold text-primary">600</td>
-                      <td>
-                          <div class="d-flex align-items-center">
-                              <div class="avatar-sm bg-primary-light rounded-circle me-3">
-                                  <i class="bi bi-person-fill text-primary fs-5"></i>
-                              </div>
-                              <div>
-                                  <div class="fw-semibold">900-JMU0002A</div>
-                                  <small class="text-muted">testUser</small>
-                              </div>
-                          </div>
-                      </td>
-                      <td class="font-monospace">G5E7F0B5F</td>
-                      <td>
-                          <div class="d-flex flex-column">
-                              <span>26/Abr/2025</span>
-                              <small class="text-muted">09:05:51 CST</small>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="timeline-indicator">
-                              <div class="d-flex flex-column">
-                                  <small class="text-success">Creado: 26/Mar 15:05</small>
-                                  <small class="text-info">Actualizado: 26/Mar 15:05</small>
-                              </div>
-                          </div>
-                      </td>
-                      <td class="pe-4 text-center">
-                          <span class="badge bg-success bg-opacity-10 text-success py-2 w-100">
-                              <i class="bi bi-check-circle-fill me-2"></i>Activo
-                          </span>
-                      </td>
-                  </tr>
+                    <tr class="clickable-row">
+                        <td class="ps-4 fw-bold">{{folio.taxiNumber}}</td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-sm bg-primary-light rounded-circle me-3">
+                                    <i class="bi bi-person-fill text-primary fs-5"></i>
+                                </div>
+                                <div>
+                                    <div class="fw-semibold">{{folio.driverID}}</div>
+                                    <small class="text-muted">{{folio.user}}</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="font-monospace">{{folio.folio}}</td>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span>{{folio.date | date:"mediumDate"  }}</span>
+                                <small class="text-muted">{{folio.date | date:"shortTime"}}</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="timeline-indicator">
+                                <div class="d-flex flex-column">
+                                    <small class="text-success">Creado: 26/Mar 15:05</small>
+                                    <small class="text-info">Actualizado: 26/Mar 15:05</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="pe-4 text-center">
+                            <span class="badge bg-success bg-opacity-10 text-success py-2 w-100">
+                                <i class="bi bi-check-circle-fill me-2"></i>Activo
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+                  }
 
-                  <!-- Registro 2 -->
-                  <tr class="clickable-row">
-                      <td class="ps-4 fw-bold text-danger">800</td>
-                      <td>
-                          <div class="d-flex align-items-center">
-                              <div class="avatar-sm bg-warning-light rounded-circle me-3">
-                                  <i class="bi bi-exclamation-triangle-fill text-warning fs-5"></i>
-                              </div>
-                              <div>
-                                  <div class="fw-semibold">Jjp-542</div>
-                                  <small class="text-muted">testUser</small>
-                              </div>
-                          </div>
-                      </td>
-                      <td class="font-monospace">34254F</td>
-                      <td>
-                          <div class="d-flex flex-column">
-                              <span>16/Abr/2025</span>
-                              <small class="text-muted">19:14:28 CST</small>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="timeline-indicator">
-                              <div class="d-flex flex-column">
-                                  <small class="text-success">Creado: 17/Abr 01:14</small>
-                                  <small class="text-info">Actualizado: 17/Abr 01:14</small>
-                              </div>
-                          </div>
-                      </td>
-                      <td class="pe-4 text-center">
-                          <span class="badge bg-warning bg-opacity-10 text-warning py-2 w-100">
-                              <i class="bi bi-clock-history me-2"></i>Pendiente
-                          </span>
-                      </td>
-                  </tr>
-
-                  <!-- Registro 3 -->
-                  <tr class="clickable-row">
-                      <td class="ps-4 fw-bold text-success">900</td>
-                      <td>
-                          <div class="d-flex align-items-center">
-                              <div class="avatar-sm bg-success-light rounded-circle me-3">
-                                  <i class="bi bi-shield-check text-success fs-5"></i>
-                              </div>
-                              <div>
-                                  <div class="fw-semibold">678.JJTORHES</div>
-                                  <small class="text-muted">testUser</small>
-                              </div>
-                          </div>
-                      </td>
-                      <td class="font-monospace">37589</td>
-                      <td>
-                          <div class="d-flex flex-column">
-                              <span>16/Abr/2025</span>
-                              <small class="text-muted">21:26:26 CST</small>
-                          </div>
-                      </td>
-                      <td>
-                          <div class="timeline-indicator">
-                              <div class="d-flex flex-column">
-                                  <small class="text-success">Creado: 17/Abr 03:26</small>
-                                  <small class="text-info">Actualizado: 17/Abr 03:26</small>
-                              </div>
-                          </div>
-                      </td>
-                      <td class="pe-4 text-center">
-                          <span class="badge bg-primary bg-opacity-10 text-primary py-2 w-100">
-                              <i class="bi bi-gear-fill me-2"></i>En proceso
-                          </span>
-                      </td>
-                  </tr>
-              </tbody>
+                 
           </table>
       </div>
 
       <div class="card-footer bg-light py-3">
           <div class="row align-items-center">
               <div class="col-md-6">
-                  <small class="text-muted">Mostrando 3 de 3 registros</small>
+                  <small class="text-black">Mostrando 3 de 3 registros</small>
               </div>
               <div class="col-md-6 text-end">
                   <div class="btn-group">

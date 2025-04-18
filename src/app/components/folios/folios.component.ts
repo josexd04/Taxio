@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FoliosService } from '../../services/folios.service';
 import { IFolio } from '../../models/IFolio.models';
+import { DatePipe } from '@angular/common';
+
 
 
 @Component({
   selector: 'app-folios',
   standalone: true,
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './folios.component.html',
   styleUrl: './folios.component.css'
 })
