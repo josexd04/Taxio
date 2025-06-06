@@ -3,16 +3,31 @@
 
   <!-- Navegación de Pestañas -->
   <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <!-- Pestaña Todos como primera y activa -->
     <li class="nav-item" role="presentation">
       <button
         class="nav-link active"
+        id="all-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#all"
+        type="button"
+        role="tab"
+        aria-controls="all"
+        aria-selected="true"
+      >
+        Todos
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
         id="active-tab"
         data-bs-toggle="tab"
         data-bs-target="#active"
         type="button"
         role="tab"
         aria-controls="active"
-        aria-selected="true"
+        aria-selected="false"
       >
         Activos
       </button>
@@ -31,114 +46,13 @@
         Inactivos
       </button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button
-        class="nav-link"
-        id="all-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#all"
-        type="button"
-        role="tab"
-        aria-controls="all"
-        aria-selected="false"
-      >
-        Todos
-      </button>
-    </li>
   </ul>
 
   <!-- Contenido de las Pestañas -->
   <div class="tab-content" id="myTabContent">
-    <!-- Pestaña Activos -->
-
+    <!-- Pestaña Todos ahora primera y activa -->
     <div
       class="tab-pane fade show active"
-      id="active"
-      role="tabpanel"
-      aria-labelledby="active-tab"
-    >
-      <div class="table-responsive">
-        <table class="table table-bordered mt-3 table-hover">
-          <thead>
-            <tr>
-              <th>Conductor</th>
-              <th>Unidad</th>
-              <th>Estado</th>
-              <th>Entrada</th>
-              <th>Salida</th>
-              <th>Acción</th>
-            </tr>
-          </thead>
-          <tbody>
-            @for (driver of drivers; track $index) { @if (driver.status) {
-            <tr>
-              <td>{{ driver.driverID }}</td>
-              <td>{{driver.taxiNumber}}</td>
-              <td><span class="badge bg-success">Activo</span></td>
-              <td>
-                <p>{{ driver.activeTime | date : "mediumTime" }}</p>
-              </td>
-              <td>
-                <input type="time" id="exitTime1" class="form-control w-100" />
-              </td>
-              <td>
-                <button type="button" class="btn btn-warning w-100" (click)="deactivateDriver(driver.driverID)">
-                  Desactivar
-                </button>
-              </td>
-            </tr>
-            } }
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Pestaña Inactivos -->
-    <div
-      class="tab-pane fade"
-      id="inactive"
-      role="tabpanel"
-      aria-labelledby="inactive-tab"
-    >
-      <div class="table-responsive">
-        <table class="table table-bordered mt-3 table-hover">
-          <thead>
-            <tr>
-              <th>Conductor</th>
-              <th>Unidad</th>
-              <th>Estado</th>
-              <th>Entrada</th>
-              <th>Salida</th>
-              <th>Acción</th>
-            </tr>
-          </thead>
-          <tbody>
-            @for (driver of drivers; track $index) { @if (!driver.status) {
-            <tr>
-              <td>{{ driver.driverID }}</td>
-              <td>{{driver.taxiNumber}}</td>
-              <td><span class="badge bg-warning">Inactivo</span></td>
-              <td>
-                <input type="time" id="exitTime1" class="form-control w-100" />
-              </td>
-              <td>
-                <p>{{ driver.lastConnection | date : "mediumTime" }}</p>
-              </td>
-              <td>
-                <button type="button" class="btn btn-success w-100" (click)="activateDriver(driver.driverID)">
-                  Activar
-                </button>
-              </td>
-            </tr>
-            } }
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Pestaña Todos -->
-    <div
-      class="tab-pane fade"
       id="all"
       role="tabpanel"
       aria-labelledby="all-tab"
@@ -196,8 +110,94 @@
         </table>
       </div>
     </div>
+
+    <!-- Pestaña Activos -->
+    <div
+      class="tab-pane fade"
+      id="active"
+      role="tabpanel"
+      aria-labelledby="active-tab"
+    >
+      <div class="table-responsive">
+        <table class="table table-bordered mt-3 table-hover">
+          <thead>
+            <tr>
+              <th>Conductor</th>
+              <th>Unidad</th>
+              <th>Estado</th>
+              <th>Entrada</th>
+              <th>Salida</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (driver of drivers; track $index) { @if (driver.status) {
+            <tr>
+              <td>{{ driver.driverID }}</td>
+              <td>{{driver.taxiNumber}}</td>
+              <td><span class="badge bg-success">Activo</span></td>
+              <td>
+                <p>{{ driver.activeTime | date : "mediumTime" }}</p>
+              </td>
+              <td>
+                <input type="time" id="exitTime1" class="form-control w-100" />
+              </td>
+              <td>
+                <button type="button" class="btn btn-warning w-100" (click)="deactivateDriver(driver.driverID)">
+                  Desactivar
+                </button>
+              </td>
+            </tr>
+            } }  
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Pestaña Inactivos -->
+    <div
+      class="tab-pane fade"
+      id="inactive"
+      role="tabpanel"
+      aria-labelledby="inactive-tab"
+    >
+      <div class="table-responsive">
+        <table class="table table-bordered mt-3 table-hover">
+          <thead>
+            <tr>
+              <th>Conductor</th>
+              <th>Unidad</th>
+              <th>Estado</th>
+              <th>Entrada</th>
+              <th>Salida</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (driver of drivers; track $index) { 
+              @if (!driver.status) {
+            <tr>
+              <td>{{ driver.driverID }}</td>
+              <td>{{driver.taxiNumber}}</td>
+              <td><span class="badge bg-warning">Inactivo</span></td>
+              <td>
+                <input type="time" id="exitTime1" class="form-control w-100" />
+              </td>
+              <td>
+                <p>{{ driver.lastConnection | date : "mediumTime" }}</p>
+              </td>
+              <td>
+                <button type="button" class="btn btn-success w-100" (click)="activateDriver(driver.driverID)">
+                  Activar
+                </button>
+              </td>
+            </tr>
+            } }
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
-
 
 <p>{{result}}</p>

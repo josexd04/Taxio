@@ -35,12 +35,12 @@ tbody {
 .btn-size {
     width: 100px; 
 }
-
+/* 
 #addTaxi {
     position: absolute;
-    right: 27%;
+    right: 8%;
     bottom: 15%;
-}
+} */
 
 .taxiNumber {
     cursor: pointer;
@@ -53,10 +53,6 @@ tbody {
     transition: 0.4s;
 }
 
-.table-scroll {
-    max-height: 50vh;
-    overflow-y: auto;
-}
 
 /* Para que la fila tenga el mismo aspecto al arrastrar */
 .preview-table {
@@ -87,7 +83,7 @@ tbody {
   
   /* Personaliza la tabla y otras clases si lo deseas */
   .table-scroll {
-    max-height: 50vh;
+    max-height: 70vh;
     overflow-y: auto;
   }
   

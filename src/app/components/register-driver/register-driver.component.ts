@@ -6,7 +6,9 @@ import { inject } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatInput } from '@angular/material/input';
 import { Route, Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { ErrorDialogComponent } from '../dialogs/error-dialog/error-dialog.component';
 
 @Component({
   selector: 'app-register-driver',
@@ -16,7 +18,7 @@ import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angula
   styleUrl: './register-driver.component.css'
 })
 export class RegisterDriverComponent implements OnInit {
-  constructor(public driverService: DriverService, private router: Router) { }
+  constructor(public driverService: DriverService, private router: Router, private dialog: MatDialog) { }
   private readonly _FormBuilder = inject(FormBuilder)
 
   formGroup = this._FormBuilder.nonNullable.group({
@@ -43,6 +45,7 @@ export class RegisterDriverComponent implements OnInit {
         license: this.formGroup.controls.license.value,
         phone: Number(this.formGroup.controls.phone.value),
         taxiNumber: Number(this.formGroup.controls.taxiNumber.value)
+        
       };
 
       this.driverService.saveDriver(driverData).subscribe({
@@ -50,9 +53,13 @@ export class RegisterDriverComponent implements OnInit {
           console.log(res)
           this.formGroup.reset()  // Reset the form after successful save
           this.router.navigate(["/active-driver"])
-          this.ngOnInit()
         },
-        error: (error) => console.log(error)
+        error: error => {
+          console.log(error)
+          this.dialog.open(ErrorDialogComponent, {
+            data: { message: `${error.error}` }
+          })
+        }
       })
     } else {
       console.log("Form is not valid")
