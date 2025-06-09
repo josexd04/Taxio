@@ -2,14 +2,14 @@ import { Component, inject, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { NewTaxiDialogComponent } from './new-taxi-dialog/new-taxi-dialog.component';
-import { HttpClientModule } from '@angular/common/http';
+import { } from '@angular/common/http';
 import { TaxisService } from '../../../services/taxis.service';
 import { ErrorDialogComponent } from '../../dialogs/error-dialog/error-dialog.component';
 
 @Component({
   selector: 'app-new-taxi',
   standalone: true,
-  imports: [ReactiveFormsModule, HttpClientModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './new-taxi.component.html',
   styleUrls: ['./new-taxi.component.css'],
 })

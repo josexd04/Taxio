@@ -1,0 +1,31 @@
+.driver-container {
+  background-color: #0d0428;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(236, 216, 216, 0.1);
+}
+
+.nav-tabs .nav-link {
+  color: #6c757d;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #141414;
+  color:#fde93c !important;
+}
+
+.nav-tabs .nav-link.active {
+  color: #fde93c;
+  background-color: #058186;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.table thead {
+  background-color: #0078f0;
+}
+
+.btn {
+  font-weight: 500;
+  border-radius: 6px;
+}

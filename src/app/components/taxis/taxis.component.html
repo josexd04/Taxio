@@ -3,9 +3,9 @@
 </div>
 
 <div class="table-responsive table-scroll">
-  <table class="table table-striped table-bordered table-hover">
+  <table class="table table-striped table-bordered table-hover table-dark">
     <thead>
-      <tr class="text-center table-primary">
+      <tr class="text-center ttext-warning">
         <th class="taxiNumber-col">Unidad</th>
         <th class="driver-col">Conductor</th>
         <th class="select-col">Posición</th>
@@ -20,14 +20,14 @@
         <td class="text-table taxiNumber">
           <p [routerLink]="['/taxi-info', taxi._id]">{{ taxi.taxiNumber }}</p>
         </td>
-        <td class="text-primary text-table">{{ taxi.driverID }}</td>
-        <td class="text-primary text-table">
+        <td class="text-warning text-table">{{ taxi.driverID }}</td>
+        <td class="text-warning text-table">
           <app-select-position
             [initialPosition]="taxi.position"
             [driverID]="taxi.driverID"
           ></app-select-position>
         </td>
-        <td class="text-primary text-table">
+        <td class="text-warning text-table">
           {{ taxi.arrivalTime | date : "shortTime" }}
         </td>
         <td>
@@ -45,13 +45,13 @@
               <td class="text-table taxiNumber">
                 {{ taxi.taxiNumber }}
               </td>
-              <td class="text-primary text-table">
+              <td class="text-warning text-table">
                 {{ taxi.driverID }}
               </td>
-              <td class="text-primary text-table">
+              <td class="text-warning text-table">
                 {{ taxi.position }}
               </td>
-              <td class="text-primary text-table">
+              <td class="text-warning text-table">
                 {{ taxi.arrivalTime | date : "shortTime" }}
               </td>
               <td class="text-table">(Arrastrando)</td>

@@ -2,8 +2,11 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-
+ 
+*::selection {
+  background-color: rgb(155, 232, 95);
+  color:#000
+}
 
 
 .cdk-overlay-container{
@@ -18,6 +21,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-app-background {
     color: #fff;
-    background: #090128;
+    background: #080123;
 
 }
