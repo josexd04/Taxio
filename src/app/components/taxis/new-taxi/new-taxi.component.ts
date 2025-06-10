@@ -7,11 +7,11 @@ import { TaxisService } from '../../../services/taxis.service';
 import { ErrorDialogComponent } from '../../dialogs/error-dialog/error-dialog.component';
 
 @Component({
-  selector: 'app-new-taxi',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './new-taxi.component.html',
-  styleUrls: ['./new-taxi.component.css'],
+    selector: 'app-new-taxi',
+    standalone:true,
+    imports: [ReactiveFormsModule],
+    templateUrl: './new-taxi.component.html',
+    styleUrls: ['./new-taxi.component.css']
 })
 export class NewTaxiComponent {
   form: FormGroup;

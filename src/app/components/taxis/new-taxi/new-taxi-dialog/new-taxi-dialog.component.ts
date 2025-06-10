@@ -7,11 +7,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-new-taxi-dialog',
-  standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatButtonModule, ReactiveFormsModule, MatDialogModule],
-  templateUrl: './new-taxi-dialog.component.html',
-  styleUrls: ['./new-taxi-dialog.component.css']
+    selector: 'app-new-taxi-dialog',
+    standalone:true,
+    imports: [MatFormFieldModule, MatInputModule, MatButtonModule, ReactiveFormsModule, MatDialogModule],
+    templateUrl: './new-taxi-dialog.component.html',
+    styleUrls: ['./new-taxi-dialog.component.css']
 })
 export class NewTaxiDialogComponent {
   form: FormGroup;

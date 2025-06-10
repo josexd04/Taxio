@@ -11,11 +11,11 @@ import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angula
 import { ErrorDialogComponent } from '../dialogs/error-dialog/error-dialog.component';
 
 @Component({
-  selector: 'app-register-driver',
-  standalone: true,
-  imports: [ReactiveFormsModule, MatInput, MatInputModule],
-  templateUrl: './register-driver.component.html',
-  styleUrl: './register-driver.component.css'
+    selector: 'app-register-driver',
+    standalone:true,
+    imports: [ReactiveFormsModule, MatInput, MatInputModule],
+    templateUrl: './register-driver.component.html',
+    styleUrl: './register-driver.component.css'
 })
 export class RegisterDriverComponent implements OnInit {
   constructor(public driverService: DriverService, private router: Router, private dialog: MatDialog) { }

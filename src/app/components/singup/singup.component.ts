@@ -4,11 +4,10 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-singup',
-  standalone: true,
-  imports: [FormsModule],
-  templateUrl: './singup.component.html',
-  styleUrl: './singup.component.css'
+    selector: 'app-singup',
+    imports: [FormsModule],
+    templateUrl: './singup.component.html',
+    styleUrl: './singup.component.css'
 })
 export class SingupComponent {
 

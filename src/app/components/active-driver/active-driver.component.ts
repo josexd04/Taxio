@@ -9,11 +9,10 @@ import { ErrorDialogComponent } from '../dialogs/error-dialog/error-dialog.compo
 
 
 @Component({
-  selector: 'app-active-driver',
-  standalone: true,
-  imports: [DatePipe],
-  templateUrl: './active-driver.component.html',
-  styleUrl: './active-driver.component.css'
+    selector: 'app-active-driver',
+    imports: [DatePipe],
+    templateUrl: './active-driver.component.html',
+    styleUrl: './active-driver.component.css'
 })
 export class ActiveDriverComponent implements OnInit {
 

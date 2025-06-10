@@ -9,18 +9,18 @@ import { CdkDragDrop, moveItemInArray, DragDropModule } from '@angular/cdk/drag-
 import { DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-taxis',
-  standalone: true,
-  imports: [
-    DatePipe,
-    NewTaxiComponent,
-    SelectPositionComponent,
-    RouterLink,
-    AssignFolioComponent,
-    DragDropModule,
-  ],
-  templateUrl: './taxis.component.html',
-  styleUrls: ['./taxis.component.css'],
+    selector: 'app-taxis',
+    standalone:true,
+    imports: [
+        DatePipe,
+        NewTaxiComponent,
+        SelectPositionComponent,
+        RouterLink,
+        AssignFolioComponent,
+        DragDropModule,
+    ],
+    templateUrl: './taxis.component.html',
+    styleUrls: ['./taxis.component.css']
 })
 export class TaxisComponent implements OnInit {
   taxis: ITaxi[] = [];

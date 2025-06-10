@@ -10,11 +10,10 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-taxi-info',
-  standalone: true,
-  imports: [DatePipe],
-  templateUrl: './taxi-info.component.html',
-  styleUrl: './taxi-info.component.css'
+    selector: 'app-taxi-info',
+    imports: [DatePipe],
+    templateUrl: './taxi-info.component.html',
+    styleUrl: './taxi-info.component.css'
 })
 export class TaxiInfoComponent implements OnInit {
 

@@ -5,11 +5,10 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-singin',
-  standalone: true,
-  imports: [FormsModule, MatInputModule],
-  templateUrl: './singin.component.html',
-  styleUrl: './singin.component.css'
+    selector: 'app-singin',
+    imports: [FormsModule, MatInputModule],
+    templateUrl: './singin.component.html',
+    styleUrl: './singin.component.css'
 })
 
 export class SinginComponent {

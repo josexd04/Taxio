@@ -5,11 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { TaxisService } from '../../../services/taxis.service';
 
 @Component({
-  selector: 'app-select-position',
-  standalone: true,
-  imports: [MatFormFieldModule, MatSelectModule, FormsModule],
-  templateUrl: './select-position.component.html',
-  styleUrls: ['./select-position.component.css']
+    selector: 'app-select-position',
+    standalone:true,
+    imports: [MatFormFieldModule, MatSelectModule, FormsModule],
+    templateUrl: './select-position.component.html',
+    styleUrls: ['./select-position.component.css']
 })
 export class SelectPositionComponent implements OnInit {
   Options = [

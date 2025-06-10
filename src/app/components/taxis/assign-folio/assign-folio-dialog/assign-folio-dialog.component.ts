@@ -16,11 +16,10 @@ import { MatInputModule } from '@angular/material/input';
 
 
 @Component({
-  selector: 'app-assign-folio-dialog',
-  standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatButtonModule, MatDialogActions, MatDialogClose, MatDialogContent, ReactiveFormsModule],
-  templateUrl: './assign-folio-dialog.component.html',
-  styleUrl: './assign-folio-dialog.component.css'
+    selector: 'app-assign-folio-dialog',
+    imports: [MatFormFieldModule, MatInputModule, MatButtonModule, MatDialogActions, MatDialogClose, MatDialogContent, ReactiveFormsModule],
+    templateUrl: './assign-folio-dialog.component.html',
+    styleUrl: './assign-folio-dialog.component.css'
 })
 export class AssignFolioDialogComponent {
   readonly data = inject<{ taxiNumber: number }>(MAT_DIALOG_DATA);

@@ -14,11 +14,10 @@ import { Inject } from '@angular/core';
 
 
 @Component({
-  selector: 'app-error-dialog',
-  standalone: true,
-  imports: [MatButtonModule, MatDialogActions, MatDialogClose, MatDialogTitle, MatDialogContent],
-  templateUrl: './error-dialog.component.html',
-  styleUrl: './error-dialog.component.css'
+    selector: 'app-error-dialog',
+    imports: [MatButtonModule, MatDialogActions, MatDialogClose, MatDialogTitle, MatDialogContent],
+    templateUrl: './error-dialog.component.html',
+    styleUrl: './error-dialog.component.css'
 })
 export class ErrorDialogComponent {
 

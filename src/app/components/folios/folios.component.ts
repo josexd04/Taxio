@@ -6,11 +6,10 @@ import { DatePipe } from '@angular/common';
 
 
 @Component({
-  selector: 'app-folios',
-  standalone: true,
-  imports: [DatePipe],
-  templateUrl: './folios.component.html',
-  styleUrl: './folios.component.css'
+    selector: 'app-folios',
+    imports: [DatePipe],
+    templateUrl: './folios.component.html',
+    styleUrl: './folios.component.css'
 })
 export class FoliosComponent  implements OnInit {
 
